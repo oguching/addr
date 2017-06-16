@@ -2,12 +2,16 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Addr - a backbone app</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
   <div class="root">
     <header>
     	<h1>Contacts</h1>
@@ -17,18 +21,17 @@
         <input type="text" name="add-contact-input" placeholder="add a new Contact">
     		<button class="add-contact-button">Add Contact</button>
     	</div>
-    	<div class="list-contact"> 
+    	<div> 
+        <ul id="contact-list"></ul>
       </div>
     </section>
   </div>  
 	<script src="js/lib/jquery-3.2.1.min.js"></script>
   <script src="js/lib/underscore-min.js"></script>
   <script src="js/lib/backbone-min.js"></script>
-  <script>
-    var AppView = Backbone.Model.extend({
-      el: $('#root'),
-
-    })
-  </script>
+  <script src="js/models/contact.js"></script>
+  <script src="js/views/contactListView.js"></script>
+  <script src="js/views/contactListItemView.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
