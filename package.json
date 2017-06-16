@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/oguching/addr.git"
   },
-  "keywords": [],
+  "keywords": ["backbonejs"],
   "author": "oguchi nzekwe <oguching@gmail.com>",
   "license": "MIT",
   "bugs": {
